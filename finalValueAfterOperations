@@ -1,0 +1,16 @@
+int finalValueAfterOperations(char **operations, int operationsSize) {
+    int X = 0;  // Initial value
+
+    for (int i = 0; i < operationsSize; i++) {
+        // Check if operation is increment
+        if (operations[i][1] == '+') {
+            X++;
+        } 
+        // Otherwise, it’s a decrement
+        else {
+            X--;
+        }
+    }
+
+    return X;
+}
